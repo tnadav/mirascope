@@ -4,11 +4,7 @@ from .anthropic import (
     AnthropicClient,
     AnthropicModelId,
 )
-from .base import (
-    BaseClient,
-    ClientT,
-    Params,
-)
+from .base import BaseClient, ClientT, Params, ThinkingConfig
 from .google import GoogleClient, GoogleModelId
 from .openai import (
     OpenAICompletionsClient,
@@ -33,6 +29,7 @@ __all__ = [
     "OpenAIResponsesModelId",
     "Params",
     "Provider",
+    "ThinkingConfig",
     "client",
     "get_client",
 ]

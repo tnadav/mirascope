@@ -24,7 +24,7 @@ from . import (
     types,
 )
 from .calls import call
-from .clients import ModelId, Params, Provider, client, get_client
+from .clients import ModelId, Params, Provider, ThinkingConfig, client, get_client
 from .content import (
     AssistantContentChunk,
     AssistantContentPart,
@@ -146,6 +146,7 @@ __all__ = [
     "TextStartChunk",
     "Thinking",
     "ThinkingChunk",
+    "ThinkingConfig",
     "ThinkingEndChunk",
     "ThinkingStartChunk",
     "TimeoutError",
