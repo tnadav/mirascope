@@ -22,7 +22,6 @@ sync_snapshot = snapshot(
                     "thinking": False,
                 },
                 "finish_reason": None,
-                "thinking_signatures": [],
                 "messages": [
                     UserMessage(content=[Text(text="What is 4200 + 42?")]),
                     AssistantMessage(content=[Text(text="4200 + 42 equals 4242.")]),
@@ -55,7 +54,6 @@ async_snapshot = snapshot(
                     "thinking": False,
                 },
                 "finish_reason": None,
-                "thinking_signatures": [],
                 "messages": [
                     UserMessage(content=[Text(text="What is 4200 + 42?")]),
                     AssistantMessage(content=[Text(text="4200 + 42 equals 4242.")]),
