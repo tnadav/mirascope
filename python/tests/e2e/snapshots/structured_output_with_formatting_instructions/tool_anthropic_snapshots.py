@@ -204,7 +204,7 @@ lucky number 7.\
 """,
         },
         "tools": [],
-        "n_chunks": 16,
+        "n_chunks": 18,
     }
 )
 without_raw_content_snapshot = snapshot()

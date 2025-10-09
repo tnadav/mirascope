@@ -83,7 +83,7 @@ stream_snapshot = snapshot(
                 ],
                 "format": None,
                 "tools": [],
-                "n_chunks": 3,
+                "n_chunks": 4,
             },
         ),
         "logging": [
@@ -109,7 +109,7 @@ async_stream_snapshot = snapshot(
                 ],
                 "format": None,
                 "tools": [],
-                "n_chunks": 3,
+                "n_chunks": 4,
             },
         ),
         "logging": [

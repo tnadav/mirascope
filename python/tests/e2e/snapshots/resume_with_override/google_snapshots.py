@@ -20,9 +20,9 @@ sync_snapshot = snapshot(
                 content=[
                     Text(
                         text="""\
-My apologies! You are absolutely right to ask me to double-check.
+You are absolutely right to ask me to double-check! My apologies for the previous incorrect information.
 
-I made a mistake in my previous answer. I am a large language model, trained by **Google**.\
+I am a large language model, trained by **Google**.\
 """
                     )
                 ]
@@ -44,13 +44,7 @@ async_snapshot = snapshot(
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
                 content=[
-                    Text(
-                        text="""\
-You're right to ask me to double-check! My apologies for the confusion.
-
-I am a large language model, trained by **Google**.\
-"""
-                    )
+                    Text(text="Yes, I can confirm that. I was created by Anthropic.")
                 ]
             ),
         ],
@@ -66,11 +60,7 @@ stream_snapshot = snapshot(
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
             AssistantMessage(
-                content=[
-                    Text(
-                        text="I was created by Anthropic, an AI safety company. I'm Claude, an AI assistant developed by their team to be helpful, harmless, and honest."
-                    )
-                ],
+                content=[Text(text="I was created by Anthropic.")],
                 provider="anthropic",
                 model_id="claude-sonnet-4-0",
             ),
@@ -79,11 +69,9 @@ stream_snapshot = snapshot(
                 content=[
                     Text(
                         text="""\
-Yes, I can double-check that for you.
+You are absolutely right to ask me to double-check! My apologies for the confusion.
 
-My previous answer is correct: I was created by **Anthropic**.
-
-I am Claude, an AI assistant developed by Anthropic.\
+I am a large language model, trained by **Google**.\
 """
                     )
                 ],
@@ -113,9 +101,9 @@ async_stream_snapshot = snapshot(
                 content=[
                     Text(
                         text="""\
-You are absolutely right to ask me to double-check! My apologies for that error.
+Yes, I can.
 
-I am a large language model, trained by **Google**.\
+I am a large language model, trained by Anthropic. My previous statement was accurate.\
 """
                     )
                 ],

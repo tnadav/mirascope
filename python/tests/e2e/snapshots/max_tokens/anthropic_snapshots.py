@@ -82,7 +82,7 @@ stream_snapshot = snapshot(
                 content=[
                     Text(
                         text="""\
-Here are all 50 U.S. states listed alphabetically:
+Here are all 50 U.S. states in alphabetical order:
 
 1. Alabama
 2. Alaska
@@ -92,7 +92,7 @@ Here are all 50 U.S. states listed alphabetically:
 6. Colorado
 7. Connecticut
 8. Delaware
-9.\
+9\
 """
                     )
                 ],
@@ -116,7 +116,7 @@ async_stream_snapshot = snapshot(
                 content=[
                     Text(
                         text="""\
-Here are all 50 U.S. states listed alphabetically:
+Here are all 50 U.S. states in alphabetical order:
 
 1. Alabama
 2. Alaska
@@ -126,7 +126,7 @@ Here are all 50 U.S. states listed alphabetically:
 6. Colorado
 7. Connecticut
 8. Delaware
-9.\
+9\
 """
                     )
                 ],
@@ -136,7 +136,7 @@ Here are all 50 U.S. states listed alphabetically:
         ],
         "format": None,
         "tools": [],
-        "n_chunks": 6,
+        "n_chunks": 8,
     }
 )
 without_raw_content_snapshot = snapshot()

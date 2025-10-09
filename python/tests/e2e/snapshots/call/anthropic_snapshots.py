@@ -49,7 +49,7 @@ stream_snapshot = snapshot(
         ],
         "format": None,
         "tools": [],
-        "n_chunks": 3,
+        "n_chunks": 4,
     }
 )
 async_stream_snapshot = snapshot(
@@ -67,7 +67,7 @@ async_stream_snapshot = snapshot(
         ],
         "format": None,
         "tools": [],
-        "n_chunks": 3,
+        "n_chunks": 4,
     }
 )
 without_raw_content_snapshot = snapshot()
