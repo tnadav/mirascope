@@ -2,7 +2,7 @@
 
 import logging
 from collections.abc import Sequence
-from typing import Literal, TypedDict
+from typing import Literal, TypedDict, cast
 
 from openai import AsyncStream, NotGiven, Stream
 from openai.types import responses as openai_types
@@ -94,7 +94,7 @@ class ResponseCreateKwargs(TypedDict, total=False):
 
 
 def _encode_message(
-    message: Message,
+    message: Message, model_id: OpenAIResponsesModelId
 ) -> ResponseInputParam:
     """Convert a Mirascope Message to OpenAI Responses input items.
 
@@ -107,6 +107,14 @@ def _encode_message(
         # instructions field, we convert system messages as we find them.
         # Unlike other LLM APIs, the system message does not need to be the first message.
         return [EasyInputMessageParam(role="developer", content=message.content.text)]
+
+    if (
+        message.role == "assistant"
+        and message.provider == "openai:responses"
+        and message.model_id == model_id
+        and message.raw_content
+    ):
+        return cast(ResponseInputParam, message.raw_content)
 
     result: ResponseInputParam = []
     logged_thought_conversion = False
@@ -292,7 +300,7 @@ def prepare_responses_request(
 
     encoded_messages: list[ResponseInputItemParam] = []
     for message in messages:
-        encoded_messages.extend(_encode_message(message))
+        encoded_messages.extend(_encode_message(message, model_id))
     kwargs["input"] = encoded_messages
 
     if openai_tools:
@@ -349,10 +357,30 @@ def decode_response(
             content=parts,
             provider="openai:responses",
             model_id=model_id,
-            raw_content=None,
+            raw_content=[
+                serialize_output_item(output_item) for output_item in response.output
+            ],
         ),
         finish_reason,
     )
+
+
+def serialize_output_item(
+    item: openai_types.ResponseOutputItem,
+) -> dict:
+    dumped = item.model_dump()
+    keys_to_pop = []
+    for key, value in dumped.items():
+        # Needed to address a contradiction in OpenAI's types: ResponseReasoningItem
+        # (api result) has status: optional = None, but ResponseReasoningItemParam has
+        # status required (but it's on a TypedDict with total=false). Setting status to
+        # explicit None results in an API error. However, if it is unset then there
+        # is no error. Madness, I know.
+        if value is None:
+            keys_to_pop.append(key)
+    for key in keys_to_pop:
+        dumped.pop(key)
+    return dumped
 
 
 class _OpenAIResponsesChunkProcessor:
