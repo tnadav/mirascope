@@ -212,7 +212,9 @@ stream_snapshot = snapshot(
                         name="get_book_info",
                         args='{"isbn": "0-7653-1178-X"}',
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
             UserMessage(
                 content=[
@@ -228,7 +230,9 @@ stream_snapshot = snapshot(
                     Text(
                         text='{"pages": 544, "title": "Mistborn: The Final Empire", "publication_year": 2006, "author": "Brandon Sanderson"}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {
@@ -301,7 +305,9 @@ async_stream_snapshot = snapshot(
                         name="get_book_info",
                         args='{"isbn": "0-7653-1178-X"}',
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
             UserMessage(
                 content=[
@@ -317,7 +323,9 @@ async_stream_snapshot = snapshot(
                     Text(
                         text='{"publication_year": 2006, "author": "Brandon Sanderson", "pages": 544, "title": "Mistborn: The Final Empire"}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {

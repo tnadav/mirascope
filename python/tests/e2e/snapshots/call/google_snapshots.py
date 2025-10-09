@@ -87,7 +87,9 @@ To find the sum of 4200 and 42, we can add them:
 So, 4200 + 42 = **4242**.\
 """
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": None,
@@ -116,7 +118,9 @@ To find the sum of 4200 + 42, you can add the numbers:
 So, 4200 + 42 = **4242**.\
 """
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": None,

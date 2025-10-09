@@ -127,7 +127,9 @@ lucky number 7.\
                     Text(
                         text='{"title": "THE NAME OF THE WIND", "author": "Patrick Rothfuss", "rating": 7}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {
@@ -176,7 +178,9 @@ lucky number 7.\
                     Text(
                         text='{"title": "THE NAME OF THE WIND", "author": "Patrick Rothfuss", "rating": 7}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {

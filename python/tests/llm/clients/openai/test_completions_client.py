@@ -25,7 +25,10 @@ def test_prepare_message_multiple_assistant_text_parts() -> None:
             [
                 llm.UserMessage(content=[llm.Text(text="Hello there")]),
                 llm.AssistantMessage(
-                    content=[llm.Text(text="General "), llm.Text(text="Kenobi")]
+                    content=[llm.Text(text="General "), llm.Text(text="Kenobi")],
+                    provider=None,
+                    model_id=None,
+                    raw_content=None,
                 ),
             ],
             None,

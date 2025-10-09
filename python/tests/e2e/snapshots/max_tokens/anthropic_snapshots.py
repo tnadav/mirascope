@@ -95,7 +95,9 @@ Here are all 50 U.S. states listed alphabetically:
 9.\
 """
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
             ),
         ],
         "format": None,
@@ -127,7 +129,9 @@ Here are all 50 U.S. states listed alphabetically:
 9.\
 """
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
             ),
         ],
         "format": None,

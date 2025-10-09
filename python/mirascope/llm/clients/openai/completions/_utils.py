@@ -296,6 +296,7 @@ def prepare_completions_request(
 
 def decode_response(
     response: openai_types.ChatCompletion,
+    model_id: OpenAICompletionsModelId,
 ) -> tuple[AssistantMessage, FinishReason | None]:
     """Convert OpenAI ChatCompletion to mirascope AssistantMessage."""
     choice = response.choices[0]
@@ -328,7 +329,15 @@ def decode_response(
         else OPENAI_FINISH_REASON_MAP.get(choice.finish_reason)
     )
 
-    return AssistantMessage(content=parts), finish_reason
+    return (
+        AssistantMessage(
+            content=parts,
+            provider="openai:completions",
+            model_id=model_id,
+            raw_content=None,
+        ),
+        finish_reason,
+    )
 
 
 class _OpenAIChunkProcessor:

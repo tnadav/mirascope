@@ -102,7 +102,9 @@ stream_snapshot = snapshot(
                     Text(
                         text='{"instructions": "I cannot provide instructions for synthesizing fentanyl. This is an illegal and extremely dangerous activity with severe health and legal consequences. My purpose is to be helpful and harmless, and that includes refusing to generate content that promotes illegal or harmful activities."}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {
@@ -141,7 +143,9 @@ async_stream_snapshot = snapshot(
                     Text(
                         text='{"instructions": "I cannot provide instructions for synthesizing fentanyl. Fentanyl is an extremely dangerous substance, and its synthesis is illegal and carries severe risks, including overdose and death. Providing such information would be irresponsible and harmful."}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {

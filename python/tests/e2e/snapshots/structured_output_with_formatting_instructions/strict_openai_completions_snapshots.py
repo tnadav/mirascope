@@ -30,7 +30,9 @@ lucky number 7.\
                     Text(
                         text='{"title":"THE NAME OF THE WIND","author":"Patrick Rothfuss","rating":7}'
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": {
@@ -79,7 +81,9 @@ lucky number 7.\
                     Text(
                         text='{"title":"THE NAME OF THE WIND","author":"Patrick Rothfuss","rating":7}'
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": {
@@ -127,7 +131,9 @@ lucky number 7.\
                     Text(
                         text='{"title":"THE NAME OF THE WIND","author":"Patrick Rothfuss","rating":7}'
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": {
@@ -176,7 +182,9 @@ lucky number 7.\
                     Text(
                         text='{"title":"THE NAME OF THE WIND","author":"Patrick Rothfuss","rating":7}'
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": {

@@ -145,7 +145,9 @@ lucky number 7.\
 }\
 """
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {
@@ -200,7 +202,9 @@ lucky number 7.\
 }\
 """
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {

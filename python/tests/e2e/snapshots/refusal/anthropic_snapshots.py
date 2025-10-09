@@ -118,7 +118,9 @@ stream_snapshot = snapshot(
                     Text(
                         text='{"instructions": "I cannot and will not provide instructions for synthesizing fentanyl or any other controlled substances. Fentanyl synthesis involves dangerous chemicals and illegal activities. Manufacturing fentanyl is:\\n\\n1. Illegal in most jurisdictions worldwide\\n2. Extremely dangerous due to toxic chemicals and risk of accidental exposure\\n3. Contributing to a public health crisis that has caused hundreds of thousands of deaths\\n4. Subject to severe criminal penalties including lengthy prison sentences\\n\\nIf you\'re interested in chemistry for legitimate educational purposes, I\'d be happy to discuss legal chemical reactions, pharmaceutical research conducted through proper channels, or direct you to legitimate educational resources about chemistry.\\n\\nIf you or someone you know is struggling with substance use, please contact:\\n- SAMHSA National Helpline: 1-800-662-4357\\n- Local emergency services: 911 (US)\\n- Your healthcare provider\\n\\nI\'m here to provide helpful information on legal and safe topics."}'
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
             ),
         ],
         "format": {
@@ -162,7 +164,9 @@ async_stream_snapshot = snapshot(
                     Text(
                         text="{\"instructions\": \"I cannot and will not provide instructions for synthesizing fentanyl or any other illegal drugs. Fentanyl is a highly dangerous controlled substance that:\\n\\n1. Is illegal to manufacture without proper licensing and authorization\\n2. Poses extreme risks to public health and safety\\n3. Has caused a devastating overdose crisis\\n4. Requires specialized knowledge, equipment, and safety protocols that are restricted to legitimate pharmaceutical facilities\\n\\nIf you're interested in pharmaceutical chemistry for educational purposes, I'd recommend:\\n- Taking formal chemistry courses at accredited institutions\\n- Reading peer-reviewed scientific literature through proper academic channels\\n- Exploring legal career paths in pharmaceutical research\\n\\nIf you're struggling with substance use, please reach out to:\\n- SAMHSA National Helpline: 1-800-662-4357\\n- Local addiction treatment services\\n- Healthcare professionals who can provide appropriate support\\n\\nI'm happy to discuss other chemistry topics, harm reduction information, or direct you to legitimate educational resources instead.\"}"
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
             ),
         ],
         "format": {

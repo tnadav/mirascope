@@ -4,9 +4,12 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Literal, TypeAlias
+from typing import TYPE_CHECKING, Literal, TypeAlias
 
 from ..content import AssistantContentPart, Text, UserContentPart
+
+if TYPE_CHECKING:
+    from ..clients import ModelId, Provider
 
 
 @dataclass(kw_only=True)
@@ -33,6 +36,27 @@ class AssistantMessage:
     role: Literal["assistant"] = "assistant"
     content: Sequence[AssistantContentPart]
     name: str | None = None
+
+    provider: Provider | None = None
+    """The LLM provider that generated this assistant message, if specified."""
+
+    model_id: ModelId | None = None
+    """The model identifier of the LLM that generated this assistant message, if specified."""
+
+    raw_content: Sequence[dict] | None = None
+    """The provider-specific raw content representation of this assistant message.
+    
+    May be used for provider-specific behavior when consuming messages they generated
+    (e.g. referencing reasoning context associated with the message). 
+
+    If present, the content should be encoded as JSON-serializable dicts, and represented
+    in a format that the provider is willing to accept as input. This may involve e.g.
+    converting Pydantic `BaseModel`s into json via `model_dump_json()`.
+
+    Raw content is not required, as the Mirascope content can also be used to generate
+    a valid input to the provider (potentially without taking advantage of provider-specific
+    reasoning caches, etc).
+    """
 
 
 Message: TypeAlias = SystemMessage | UserMessage | AssistantMessage

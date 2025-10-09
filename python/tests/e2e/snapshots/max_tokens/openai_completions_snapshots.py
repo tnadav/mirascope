@@ -33,7 +33,9 @@ Here is a list of all 50 U.S. states:
 10\
 """
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -65,7 +67,9 @@ Sure! Here is a list of all the U.S. states:
 9. Florida
 """
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -96,7 +100,9 @@ Certainly! Here is a list of all 50 U.S. states:
 9. Florida\
 """
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -129,7 +135,9 @@ Here is a list of all 50 U.S. states:
 10\
 """
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,

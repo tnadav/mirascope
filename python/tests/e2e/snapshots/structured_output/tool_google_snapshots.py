@@ -156,7 +156,9 @@ stream_snapshot = snapshot(
                     Text(
                         text='{"author": {"last_name": "Rothfuss", "first_name": "Patrick"}, "rating": 7, "title": "THE NAME OF THE WIND"}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {
@@ -219,7 +221,9 @@ async_stream_snapshot = snapshot(
                     Text(
                         text='{"author": {"last_name": "Rothfuss", "first_name": "Patrick"}, "rating": 7, "title": "THE NAME OF THE WIND"}'
                     )
-                ]
+                ],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
         ],
         "format": {

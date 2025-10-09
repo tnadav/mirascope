@@ -16,7 +16,11 @@ sync_snapshot = snapshot(
             UserMessage(content=[Text(text="Who created you?")]),
             AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
             UserMessage(content=[Text(text="Can you double-check that?")]),
-            AssistantMessage(content=[Text(text="I was indeed created by Anthropic!")]),
+            AssistantMessage(
+                content=[Text(text="I was indeed created by Anthropic!")],
+                provider="openai:responses",
+                model_id="gpt-4o",
+            ),
         ],
         "format": None,
         "tools": [],
@@ -32,7 +36,11 @@ async_snapshot = snapshot(
             UserMessage(content=[Text(text="Who created you?")]),
             AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
             UserMessage(content=[Text(text="Can you double-check that?")]),
-            AssistantMessage(content=[Text(text="Yes, I was created by Anthropic.")]),
+            AssistantMessage(
+                content=[Text(text="Yes, I was created by Anthropic.")],
+                provider="openai:responses",
+                model_id="gpt-4o",
+            ),
         ],
         "format": None,
         "tools": [],
@@ -45,10 +53,16 @@ stream_snapshot = snapshot(
         "finish_reason": None,
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
-            AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
+            AssistantMessage(
+                content=[Text(text="I was created by Anthropic.")],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+            ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
-                content=[Text(text="Yes, I was indeed created by Anthropic.")]
+                content=[Text(text="Yes, I was indeed created by Anthropic.")],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -63,10 +77,16 @@ async_stream_snapshot = snapshot(
         "finish_reason": None,
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
-            AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
+            AssistantMessage(
+                content=[Text(text="I was created by Anthropic.")],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+            ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
-                content=[Text(text="Yep, I was indeed created by Anthropic.")]
+                content=[Text(text="Yep, I was indeed created by Anthropic.")],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,

@@ -36,7 +36,9 @@ sync_snapshot = snapshot(
                         name="secret_retrieval_tool",
                         args='{"password":"radiance"}',
                     ),
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
             UserMessage(
                 content=[
@@ -62,7 +64,9 @@ Here are the secrets associated with each password:
 - **radiance**: Life before Death\
 """
                     )
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -117,7 +121,9 @@ async_snapshot = snapshot(
                         name="secret_retrieval_tool",
                         args='{"password":"radiance"}',
                     ),
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
             UserMessage(
                 content=[
@@ -143,7 +149,9 @@ Here are the secrets associated with the passwords:
 - Password `"radiance"`: Life before Death\
 """
                     )
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -197,7 +205,9 @@ stream_snapshot = snapshot(
                         name="secret_retrieval_tool",
                         args='{"password":"radiance"}',
                     ),
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
             UserMessage(
                 content=[
@@ -223,7 +233,9 @@ Here are the secrets:
 - **radiance**: Life before Death\
 """
                     )
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -278,7 +290,9 @@ async_stream_snapshot = snapshot(
                         name="secret_retrieval_tool",
                         args='{"password":"radiance"}',
                     ),
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
             UserMessage(
                 content=[
@@ -304,7 +318,9 @@ Here are the secrets for the provided passwords:
 - **radiance**: Life before Death\
 """
                     )
-                ]
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,

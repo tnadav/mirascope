@@ -21,7 +21,9 @@ sync_snapshot = snapshot(
                     Text(
                         text="Yes, I can confirm that I was created by Anthropic, a company focused on developing AI models and systems."
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -43,7 +45,9 @@ async_snapshot = snapshot(
                     Text(
                         text="Yes, I can confirm that I was created by Anthropic, an AI safety and research company."
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -57,12 +61,18 @@ stream_snapshot = snapshot(
         "finish_reason": None,
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
-            AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
+            AssistantMessage(
+                content=[Text(text="I was created by Anthropic.")],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+            ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
                 content=[
                     Text(text="Yes, I can confirm that I was created by Anthropic.")
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,
@@ -77,14 +87,20 @@ async_stream_snapshot = snapshot(
         "finish_reason": None,
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
-            AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
+            AssistantMessage(
+                content=[Text(text="I was created by Anthropic.")],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+            ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
                 content=[
                     Text(
                         text="Yes, I can confirm that I was developed by Anthropic, a company focused on creating safe and aligned AI models."
                     )
-                ]
+                ],
+                provider="openai:completions",
+                model_id="gpt-4o",
             ),
         ],
         "format": None,

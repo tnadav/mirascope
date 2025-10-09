@@ -62,7 +62,9 @@ stream_snapshot = snapshot(
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
             AssistantMessage(
-                content=[Text(text="I am a large language model, trained by Google.")]
+                content=[Text(text="I am a large language model, trained by Google.")],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
@@ -70,7 +72,9 @@ stream_snapshot = snapshot(
                     Text(
                         text="You're absolutely right to ask me to double-check that. I made an error - I am Claude, and I was created by Anthropic, not Google. Thank you for the correction!"
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
             ),
         ],
         "format": None,
@@ -86,7 +90,9 @@ async_stream_snapshot = snapshot(
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
             AssistantMessage(
-                content=[Text(text="I am a large language model, trained by Google.")]
+                content=[Text(text="I am a large language model, trained by Google.")],
+                provider="google",
+                model_id="gemini-2.5-flash",
             ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
@@ -94,7 +100,9 @@ async_stream_snapshot = snapshot(
                     Text(
                         text="You're absolutely right - I apologize for the error. I am Claude, an AI assistant created by Anthropic. Thank you for prompting me to correct that mistake."
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
             ),
         ],
         "format": None,
