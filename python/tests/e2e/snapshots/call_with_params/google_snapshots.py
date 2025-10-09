@@ -158,3 +158,4 @@ To find the sum of 4200 and 42, you add them together:
         ],
     }
 )
+without_raw_content_snapshot = snapshot()

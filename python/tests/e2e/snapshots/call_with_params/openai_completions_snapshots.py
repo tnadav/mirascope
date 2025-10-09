@@ -126,3 +126,4 @@ async_stream_snapshot = snapshot(
         ],
     }
 )
+without_raw_content_snapshot = snapshot()

@@ -128,3 +128,4 @@ I am a large language model, trained by **Google**.\
         "n_chunks": 3,
     }
 )
+without_raw_content_snapshot = snapshot()

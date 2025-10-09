@@ -267,3 +267,4 @@ async_stream_snapshot = snapshot(
         "n_chunks": 31,
     }
 )
+without_raw_content_snapshot = snapshot()

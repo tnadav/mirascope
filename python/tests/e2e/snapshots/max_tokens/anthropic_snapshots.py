@@ -139,3 +139,4 @@ Here are all 50 U.S. states listed alphabetically:
         "n_chunks": 6,
     }
 )
+without_raw_content_snapshot = snapshot()

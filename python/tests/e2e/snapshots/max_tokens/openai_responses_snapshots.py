@@ -205,3 +205,4 @@ Here is a list of all U.S. states:
         "n_chunks": 52,
     }
 )
+without_raw_content_snapshot = snapshot()

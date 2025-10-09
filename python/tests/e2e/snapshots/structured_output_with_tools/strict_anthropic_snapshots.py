@@ -40,3 +40,4 @@ async_stream_snapshot = snapshot(
         "provider": "anthropic",
     }
 )
+without_raw_content_snapshot = snapshot()

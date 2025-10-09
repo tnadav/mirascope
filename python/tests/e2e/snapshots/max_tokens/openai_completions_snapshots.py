@@ -145,3 +145,4 @@ Here is a list of all 50 U.S. states:
         "n_chunks": 52,
     }
 )
+without_raw_content_snapshot = snapshot()

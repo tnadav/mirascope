@@ -102,6 +102,7 @@ CallType = Literal[
     "async_context",
     "stream_context",
     "async_stream_context",
+    "without_raw_content",  # Special case - zero out assistant message raw content to test fallback paths
 ]
 """The basic "call types" that all tests should cover."""
 
@@ -166,6 +167,7 @@ def _parse_test_name(test_name: str) -> tuple[str, CallType]:
 
     # Known call_types to look for at the end (order matters - check longest first)
     call_types: list[CallType] = [
+        "without_raw_content",
         "async_stream_context",
         "async_stream",
         "stream_context",
@@ -261,6 +263,7 @@ def snapshot(
             "async_snapshot = snapshot()\n"
             "stream_snapshot = snapshot()\n"
             "async_stream_snapshot = snapshot()\n"
+            "without_raw_content_snapshot = snapshot()\n"
         )
 
     module = importlib.import_module(module_path)

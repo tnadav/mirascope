@@ -427,3 +427,109 @@ Here are the secrets for the provided passwords:
         "n_chunks": 32,
     }
 )
+without_raw_content_snapshot = snapshot(
+    {
+        "provider": "openai:responses",
+        "model_id": "gpt-4o",
+        "params": {},
+        "finish_reason": None,
+        "messages": [
+            SystemMessage(content=Text(text="Use parallel tool calling.")),
+            UserMessage(
+                content=[
+                    Text(
+                        text="Please retrieve the secrets associated with each of these passwords: mellon,radiance"
+                    )
+                ]
+            ),
+            AssistantMessage(
+                content=[
+                    ToolCall(
+                        id="call_2l5zWsybzlLfRnKNZcUwPCDD",
+                        name="secret_retrieval_tool",
+                        args='{"password":"mellon"}',
+                    ),
+                    ToolCall(
+                        id="call_QkfbCECtJTNDR7Mt8HqZG0jf",
+                        name="secret_retrieval_tool",
+                        args='{"password":"radiance"}',
+                    ),
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
+            ),
+            UserMessage(
+                content=[
+                    ToolOutput(
+                        id="call_2l5zWsybzlLfRnKNZcUwPCDD",
+                        name="secret_retrieval_tool",
+                        value="Welcome to Moria!",
+                    ),
+                    ToolOutput(
+                        id="call_QkfbCECtJTNDR7Mt8HqZG0jf",
+                        name="secret_retrieval_tool",
+                        value="Life before Death",
+                    ),
+                ]
+            ),
+            AssistantMessage(
+                content=[
+                    Text(
+                        text="""\
+The secrets have been retrieved:
+
+1. Password "mellon": Welcome to Moria!
+2. Password "radiance": Life before Death\
+"""
+                    )
+                ],
+                provider="openai:responses",
+                model_id="gpt-4o",
+                raw_content=[
+                    {
+                        "id": "msg_02e5caabc0ddab840068e821ea3c208190bf33e4039f92ede9",
+                        "content": [
+                            {
+                                "annotations": [],
+                                "text": """\
+The secrets have been retrieved:
+
+1. Password "mellon": Welcome to Moria!
+2. Password "radiance": Life before Death\
+""",
+                                "type": "output_text",
+                                "logprobs": [],
+                            }
+                        ],
+                        "role": "assistant",
+                        "status": "completed",
+                        "type": "message",
+                    }
+                ],
+            ),
+        ],
+        "format": None,
+        "tools": [
+            {
+                "name": "secret_retrieval_tool",
+                "description": "A tool that requires a password to retrieve a secret.",
+                "parameters": """\
+{
+  "properties": {
+    "password": {
+      "title": "Password",
+      "type": "string"
+    }
+  },
+  "required": [
+    "password"
+  ],
+  "additionalProperties": false,
+  "defs": null
+}\
+""",
+                "strict": False,
+            }
+        ],
+    }
+)

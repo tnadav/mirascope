@@ -675,3 +675,4 @@ Respond only with valid JSON that matches this exact schema:
         "n_chunks": 3,
     }
 )
+without_raw_content_snapshot = snapshot()

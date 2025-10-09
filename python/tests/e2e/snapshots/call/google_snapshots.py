@@ -128,3 +128,4 @@ So, 4200 + 42 = **4242**.\
         "n_chunks": 4,
     }
 )
+without_raw_content_snapshot = snapshot()

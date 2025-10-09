@@ -36,3 +36,4 @@ async_stream_snapshot = snapshot(
         "provider": "google",
     }
 )
+without_raw_content_snapshot = snapshot()
