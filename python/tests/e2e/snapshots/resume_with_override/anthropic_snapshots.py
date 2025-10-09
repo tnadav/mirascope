@@ -23,7 +23,16 @@ sync_snapshot = snapshot(
                     Text(
                         text="You're absolutely right, and I apologize for the error. I am Claude, an AI assistant created by Anthropic. Thank you for prompting me to correct that mistake."
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "citations": None,
+                        "text": "You're absolutely right, and I apologize for the error. I am Claude, an AI assistant created by Anthropic. Thank you for prompting me to correct that mistake.",
+                        "type": "text",
+                    }
+                ],
             ),
         ],
         "format": None,
@@ -47,7 +56,16 @@ async_snapshot = snapshot(
                     Text(
                         text="You're absolutely right to ask me to double-check that. I made an error - I am Claude, and I was created by Anthropic, not Google. Thank you for the correction!"
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "citations": None,
+                        "text": "You're absolutely right to ask me to double-check that. I made an error - I am Claude, and I was created by Anthropic, not Google. Thank you for the correction!",
+                        "type": "text",
+                    }
+                ],
             ),
         ],
         "format": None,

@@ -14,7 +14,18 @@ sync_snapshot = snapshot(
         "finish_reason": None,
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
-            AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
+            AssistantMessage(
+                content=[Text(text="I was created by Anthropic.")],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "citations": None,
+                        "text": "I was created by Anthropic.",
+                        "type": "text",
+                    }
+                ],
+            ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
                 content=[
@@ -40,7 +51,18 @@ async_snapshot = snapshot(
         "finish_reason": None,
         "messages": [
             UserMessage(content=[Text(text="Who created you?")]),
-            AssistantMessage(content=[Text(text="I was created by Anthropic.")]),
+            AssistantMessage(
+                content=[Text(text="I was created by Anthropic.")],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "citations": None,
+                        "text": "I was created by Anthropic.",
+                        "type": "text",
+                    }
+                ],
+            ),
             UserMessage(content=[Text(text="Can you double-check that?")]),
             AssistantMessage(
                 content=[

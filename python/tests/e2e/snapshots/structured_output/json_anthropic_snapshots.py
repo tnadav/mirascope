@@ -87,7 +87,25 @@ Respond only with valid JSON that matches this exact schema:
 }\
 """
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "citations": None,
+                        "text": """\
+{
+  "title": "THE NAME OF THE WIND",
+  "author": {
+    "first_name": "Patrick",
+    "last_name": "Rothfuss"
+  },
+  "rating": 7
+}\
+""",
+                        "type": "text",
+                    }
+                ],
             ),
         ],
         "format": {
@@ -253,7 +271,25 @@ Respond only with valid JSON that matches this exact schema:
 }\
 """
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "citations": None,
+                        "text": """\
+{
+  "title": "THE NAME OF THE WIND",
+  "author": {
+    "first_name": "Patrick",
+    "last_name": "Rothfuss"
+  },
+  "rating": 7
+}\
+""",
+                        "type": "text",
+                    }
+                ],
             ),
         ],
         "format": {

@@ -31,7 +31,24 @@ sync_snapshot = snapshot(
                     Text(
                         text='{"title": "THE NAME OF THE WIND", "author": {"first_name": "Patrick", "last_name": "Rothfuss"}, "rating": 7}'
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "id": "toolu_01XTWxJcMDc5SjACCvi1Cr8a",
+                        "input": {
+                            "title": "THE NAME OF THE WIND",
+                            "author": {
+                                "first_name": "Patrick",
+                                "last_name": "Rothfuss",
+                            },
+                            "rating": 7,
+                        },
+                        "name": "__mirascope_formatted_output_tool__",
+                        "type": "tool_use",
+                    }
+                ],
             ),
         ],
         "format": {
@@ -94,7 +111,24 @@ async_snapshot = snapshot(
                     Text(
                         text='{"title": "THE NAME OF THE WIND", "author": {"first_name": "Patrick", "last_name": "Rothfuss"}, "rating": 7}'
                     )
-                ]
+                ],
+                provider="anthropic",
+                model_id="claude-sonnet-4-0",
+                raw_content=[
+                    {
+                        "id": "toolu_01F7xp2P2hamWKeeYGS9Qn8s",
+                        "input": {
+                            "title": "THE NAME OF THE WIND",
+                            "author": {
+                                "first_name": "Patrick",
+                                "last_name": "Rothfuss",
+                            },
+                            "rating": 7,
+                        },
+                        "name": "__mirascope_formatted_output_tool__",
+                        "type": "tool_use",
+                    }
+                ],
             ),
         ],
         "format": {
